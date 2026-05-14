@@ -1,7 +1,7 @@
 {
   "name": "react-essentials-start",
   "version": "0.0.0",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -17,6 +17,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.0.0",
+    "sass": "^1.99.0",
     "typescript": "^6.0.3",
     "vite": "^4.3.9"
   },
