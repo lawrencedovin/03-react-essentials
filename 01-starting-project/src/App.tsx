@@ -6,9 +6,9 @@ import TabButton from "./components/TabButton/TabButton.tsx";
 import { CORE_CONCEPTS, EXAMPLES, type ExampleKeys } from "./data.ts";
 
 function App() {
-  const [selectedTopic, setSelectedTopic]: [ExampleKeys, Dispatch<SetStateAction<any>>] = useState('components');
+  const [selectedTopic, setSelectedTopic] = useState<ExampleKeys>('components');
 
-  function handleSelect(selectedButton: string) {
+  function handleSelect(selectedButton: ExampleKeys) {
     setSelectedTopic(selectedButton);
   }
 
