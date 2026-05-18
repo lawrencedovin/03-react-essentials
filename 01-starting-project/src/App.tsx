@@ -1,4 +1,4 @@
-import { useState, type Dispatch, type SetStateAction } from 'react';
+import { useState } from 'react';
 
 import Header from "./components/Header/Header.tsx";
 import CoreConcept from "./components/CoreConcept/CoreConcept.tsx";
