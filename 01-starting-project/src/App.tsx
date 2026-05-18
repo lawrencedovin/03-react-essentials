@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState, type Dispatch, type SetStateAction } from 'react';
 
 import Header from "./components/Header/Header.tsx";
 import CoreConcept from "./components/CoreConcept/CoreConcept.tsx";
 import TabButton from "./components/TabButton/TabButton.tsx";
-import { CORE_CONCEPTS } from "./data.ts";
+import { CORE_CONCEPTS, EXAMPLES, type ExampleKeys } from "./data.ts";
 
 function App() {
-  const [selectedTopic, setSelectedTopic]  = useState('Please click a button');
+  const [selectedTopic, setSelectedTopic]: [ExampleKeys, Dispatch<SetStateAction<any>>] = useState('components');
 
   function handleSelect(selectedButton: string) {
     setSelectedTopic(selectedButton);
@@ -38,7 +38,17 @@ function App() {
               State
             </TabButton>
           </menu>
-          {selectedTopic}
+          <div id="tab-content">
+            <h3>
+              {EXAMPLES[selectedTopic].title}
+            </h3>
+            <p>{EXAMPLES[selectedTopic].description}</p>
+            <pre>
+              <code>
+                {EXAMPLES[selectedTopic].code}
+              </code>
+            </pre>
+          </div>
         </section>
       </main>
     </div>
